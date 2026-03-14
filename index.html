@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S&N Field Research | Elite Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+ <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap');
+    
+    body { font-family: 'Plus Jakarta Sans', sans-serif; background: #020617; color: #f8fafc; overflow-x: hidden; }
+    h1, h2, h3 { font-family: 'Playfair Display', serif; }
+
+    header { background: linear-gradient(to bottom, rgba(2, 6, 23, 0.9), transparent); backdrop-filter: blur(8px); }
+
+    #navSidebar {
+        transform: translateX(-100%);
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        background: rgba(2, 6, 23, 0.98);
+        backdrop-filter: blur(25px);
+        border-right: 1px solid rgba(255,255,255,0.05);
+    }
+    #navSidebar.active { transform: translateX(0); }
+
+    /* UPDATED HERO BACKGROUND WITH WESCHOOL CAMPUS */
+    .hero-gradient {
+        background: linear-gradient(rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0.85)), 
+                    url('https://images.shiksha.com/mediadata/images/1589535035php2UvB0q.jpeg');
+        background-size: cover; 
+        background-position: center;
+        background-attachment: fixed; /* Parallax effect for elite feel */
+    }
+
+    .page-view { display: none; opacity: 0; transform: translateY(20px); transition: all 0.5s ease; }
+    .page-view.active { display: block; opacity: 1; transform: translateY(0); }
+
+    .glass-panel { 
+        background: rgba(255, 255, 255, 0.03); 
+        backdrop-filter: blur(10px); 
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        transition: all 0.3s ease;
+    }
+    .glass-panel:hover { border-color: #3b82f6; background: rgba(255, 255, 255, 0.05); }
+</style>
+</head>
+<body>
+
+    <header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-6">
+        <button id="openMenu" class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:scale-110 active:scale-95 transition-all">
+            <i data-lucide="menu" class="w-6 h-6"></i>
+        </button>
+        <div class="text-right">
+            <p class="text-[10px] font-bold tracking-[0.4em] text-blue-400">WESCHOOL PG3 (25-27)</p>
+            <p class="text-xs font-bold uppercase">Field Study 2026</p>
+        </div>
+    </header>
+
+    <aside id="navSidebar" class="fixed inset-y-0 left-0 z-[60] w-full md:w-[450px] p-12 overflow-y-auto">
+        <div class="flex justify-between items-center mb-10">
+            <h3 class="text-blue-500 font-bold uppercase tracking-widest text-[10px]">Directory</h3>
+            <button id="closeMenu" class="text-slate-500 hover:text-white transition">
+                <i data-lucide="x" class="w-8 h-8"></i>
+            </button>
+        </div>
+
+        <button id="goHome" class="flex items-center gap-4 text-3xl font-bold text-white hover:text-blue-500 transition-colors mb-12 group">
+            <span class="bg-white/5 p-3 rounded-2xl group-hover:bg-blue-600 transition-all">
+                <i data-lucide="home" class="w-6 h-6"></i>
+            </span>
+            Back to Home
+        </button>
+
+        <nav id="menuContainer" class="space-y-8">
+            </nav>
+    </aside>
+
+    <div id="landingView" class="page-view active">
+        <section class="hero-gradient h-screen flex flex-col items-center justify-center text-center px-6">
+            <h1 class="text-6xl md:text-9xl font-black mb-8 leading-[0.85] tracking-tighter">
+                Selling & Negotiation<br><span class="text-blue-500 italic font-light">DYNAMICS</span>
+            </h1>
+            <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light">
+                An experiential deep-dive into the selling and negotiation landscapes of Mumbai.
+            </p>
+            <button onclick="document.getElementById('openMenu').click()" class="bg-blue-600 text-white px-12 py-5 font-bold uppercase tracking-widest hover:bg-blue-700 transition-all rounded-full shadow-2xl shadow-blue-500/20">
+                Explore The Study
+            </button>
+        </section>
+
+        <section class="py-32 px-8 bg-white text-slate-900">
+            <div class="max-w-4xl mx-auto">
+                <span class="text-blue-600 font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Section 1.1</span>
+                <h2 class="text-5xl font-bold mb-10 text-slate-950">Purpose of the Field Study</h2>
+               <div class="grid md:grid-cols-2 gap-12 items-center">
+    <div class="text-lg leading-relaxed text-slate-600 border-r border-slate-100 pr-8">
+        <p>
+            This field study was conducted as part of our PGDM course at S.P. Mandali's WeSchool. The objective was to step beyond classroom theory and observe how real buying, selling, and negotiation actually unfold across different retail environments in Mumbai.
+        </p>
+    </div>
+
+    <div class="pl-4 text-right">
+        <p class="text-xl md:text-2xl font-bold text-slate-800 leading-tight mb-4 italic">
+            "Life is all about SALES, everyone has to do it."
+        </p>
+        <div class="flex items-center justify-end gap-3">
+            <div class="w-8 h-[1px] bg-blue-600"></div>
+            <p class="text-sm font-extrabold uppercase tracking-widest text-blue-600">
+                Dr. Nilesh Kulkarni
+            </p>
+        </div>
+    </div>
+</div>
+        </section>
+    </div>
+
+    <main id="reportView" class="page-view pt-32 pb-40 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div id="reportHeader" class="mb-20"></div>
+            <div id="reportGrid" class="grid lg:grid-cols-2 gap-8"></div>
+        </div>
+    </main>
+
+    <footer class="bg-slate-950 py-16 text-center border-t border-white/5 text-slate-600 text-[10px] uppercase tracking-[0.5em]">
+        &copy; 2026 WeSchool | PGDM Selling & Negotiation Project
+    </footer>
+
+    <script>
+        const marketImages = {
+            'Dadar Market': 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2000&auto=format&fit=crop',
+            'Sion Leather Market': 'https://images.unsplash.com/photo-1547038579-cc97b6a4498e?q=80&w=2000&auto=format&fit=crop',
+            'Masjid Bandar': 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=2000&auto=format&fit=crop',
+            'Inorbit Mall': 'https://images.unsplash.com/photo-1519451241324-20b4ea2c4220?q=80&w=2000&auto=format&fit=crop'
+        };
+
+        const siteData = {
+            'Dadar Market': {
+                theory: 'Distributive Bargaining',
+                groups: {
+                    1: { obs: ['High footfall at station exits', 'Temporary stall clusters', 'High visual contrast displays', 'Lack of price tags', 'Sensory noise used for urgency', 'Verbal engagement with passersby'], tactics: ['Quoting 40% above floor', 'Bulk bundling offers', 'Loss leader shouting', 'Physical product placement', 'FOMO scripts', 'Rapid speech patterns'] },
+                    2: { obs: ['Buyer silence as leverage', 'Demographic gauging by attire', 'Negotiation under 90 seconds', 'High emotional charge', 'Walking away as a test', 'Localized dialect rapport'], tactics: ['"Boni" (first sale) discounts', 'Personal storytelling', 'Decreasing concessions', 'Complimentary add-ons', 'Devaluing competitors', 'Durability demonstrations'] },
+                    3: { obs: ['Focus on ethnic wear styles', 'Family group buying impact', 'Body language mirroring', 'Rush-hour ultimatums', 'Face-saving concessions', 'Strategic lighting usage'], tactics: ['Emotional anchoring', 'Aesthetic flattery', 'Commuter specific discounts', 'Festive bulk incentives', 'Small talk trust building', 'Good-cop/Bad-cop coordination'] },
+                    4: { obs: ['Price shifts (AM vs PM)', 'Standing vendor closure rate', 'Reseller profile identification', 'Crowd influence on deals', 'Tactile pride in stock', 'Negotiation visual cues'], tactics: ['Cognitive pattern disruption', 'Ignoring low-ball offers', 'Value re-anchoring', 'Market slang for rapport', 'Strategic bottom-price silence', 'Physical distance closing'] }
+                }
+            },
+            'Sion Leather Market': {
+                theory: 'Value-Based Selling',
+                groups: {
+                    1: { obs: ['Workshops attached to retail', 'Educational consultations', 'Authentic scent triggers', 'Material durability focus', 'High conversion rates', 'Artisan-led interactions'], tactics: ['Authenticity burn tests', 'Grain/Grade education', 'Customization offers', 'Legacy narratives', 'Synthetic devaluing', 'Craftsmanship warranties'] },
+                    2: { obs: ['Win-win deal focus', 'Technical authority jargon', 'Weight and scent tactile focus', 'Firm price floors', 'Long-term trust priority', 'Transparent cost discussions'], tactics: ['Water-resistance demos', 'Lining quality benchmarks', 'Accessory set bundling', 'Post-sale care tools', 'Career-based pitching', 'Tannery storytelling'] },
+                    3: { obs: ['Value chain transparency', 'Sitting-based negotiation', 'Workshop verification tours', 'Niche price consistency', 'Thickness as quality proxy', 'Low-noise interactions'], tactics: ['10-year durability claims', 'Tanning process explanation', 'Free lifetime polishing', 'Relationship pricing', 'Export quality citation', 'Direct source narratives'] },
+                    4: { obs: ['Reseller batch buying', 'Export standard influence', 'Boutique shop layouts', 'Certification trust', 'Bulk consistency checks', 'Artisan professionalism'], tactics: ['Export-mark highlighting', 'Premium hide upselling', 'Limited edition scripts', 'Social status alignment', 'Conditioning kit inclusion', 'Flaw-admission credibility'] }
+                }
+            },
+            'Masjid Bandar': {
+                theory: 'Integrative Negotiation',
+                groups: {
+                    1: { obs: ['Relationship-first commerce', 'Hospitality trust phase', 'Credit-based dominance', 'Logistics as leverage', 'Multi-generational trust', 'Sample-based inventory'], tactics: ['Tiered volume pricing', 'Credit window negotiation', 'Exclusive territory promises', 'Community discounts', 'Pre-business small talk', 'Intelligence sharing'] },
+                    2: { obs: ['Margin-focused bargaining', 'APMC rate benchmarking', 'Shipping cost haggling', 'Seasonal supply planning', 'Phone-based deal closures', 'High-speed turnover'], tactics: ['Futures contracts', 'Cross-commodity bundling', 'Scarcity narratives', 'Loyalty rebate programs', 'Index-based anchoring', 'Free bulk bonus kilos'] },
+                    3: { obs: ['Trade agent influence', 'Sack-unit measurement', 'Speech brevity (noise)', 'Quality warehouse audits', 'Daily price volatility', 'Multilingual interactions'], tactics: ['Direct farm narratives', 'Cash discount tiers', 'Transportation support', 'Free bulk sampling', 'Festive supply guarantees', 'Live batch testing'] },
+                    4: { obs: ['GST formalization impact', 'Owner-centric power', 'Auction-style dynamics', 'Turnover speed KPI', 'Expert buyer knowledge', 'Social capital barriers'], tactics: ['Shared meal bonding', 'Next-season promises', 'Open-book margin talk', 'MOQ qualification tests', 'Ethical sourcing scripts', 'Lot scarcity plays'] }
+                }
+            },
+            'Inorbit Mall': {
+                theory: 'Consultative Retail',
+                groups: {
+                    1: { obs: ['Fixed-price architecture', 'Signature scent marketing', 'Staff as brand stylists', 'Return policy assurance', 'Window shopping dominance', 'Digital loyalty capture'], tactics: ['Premium model upselling', 'Cross-selling ensembles', 'Promotion cycle usage', 'Point-to-cash translation', 'Ambience comfort selling', 'Complementary wrapping'] },
+                    2: { obs: ['In-store digital tools', 'Brand/Self-image alignment', 'Staff demographic mirroring', 'Technical USP education', 'Warranty focus', 'Calm environment logic'], tactics: ['Regional stock scarcity', 'Multi-buy bundling', 'No-cost EMI levers', 'Social proof citations', 'Early access member perks', 'Risk-free home trials'] },
+                    3: { obs: ['High-margin floor pathing', 'Omnichannel price sync', 'Showrooming management', 'Heritage reliance', 'Uniformed professional trust', 'Spotlight installations'], tactics: ['Influencer alignment', 'Extended warranty upsells', 'VIP concierge service', 'In-store launch events', 'POP impulse displays', 'Heritage quality scripts'] },
+                    4: { obs: ['Red-tag psychology', 'Family unit decisions', 'Digital trust surveys', 'Dwelling time tactics', 'Price comfort zone', 'Consistency focus'], tactics: ['Gift-with-Purchase', 'Referral discounts', 'Pre-warming marketing', 'Professional consulting', 'Premium packaging', 'Post-sale follow-ups'] }
+                }
+            }
+        };
+
+        const App = {
+            init() {
+                this.buildNav();
+                this.bindEvents();
+                lucide.createIcons();
+            },
+
+            bindEvents() {
+                const sidebar = document.getElementById('navSidebar');
+                document.getElementById('openMenu').addEventListener('click', () => sidebar.classList.add('active'));
+                document.getElementById('closeMenu').addEventListener('click', () => sidebar.classList.remove('active'));
+                document.getElementById('goHome').addEventListener('click', () => {
+                    document.getElementById('landingView').style.display = 'block';
+                    document.getElementById('reportView').classList.remove('active');
+                    sidebar.classList.remove('active');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            },
+
+            buildNav() {
+                const container = document.getElementById('menuContainer');
+                Object.keys(siteData).forEach(loc => {
+                    const safeId = loc.replace(/\s+/g, '');
+                    const subLinks = [1,2,3,4].map(g => `<button onclick="App.render('${loc}', ${g})" class="block w-full text-left py-2 hover:text-white transition-all">Group ${g} Report</button>`).join('');
+                    
+                    container.innerHTML += `
+                        <div class="border-b border-white/5 pb-6">
+                            <button class="menu-toggle text-3xl font-bold flex items-center justify-between w-full hover:text-blue-500 text-white transition-all" data-target="sub-${safeId}">
+                                ${loc} <i data-lucide="chevron-down" class="w-6 h-6"></i>
+                            </button>
+                            <div id="sub-${safeId}" class="hidden pl-8 mt-4 space-y-3 text-xl text-slate-400 border-l border-blue-600/30">
+                                ${subLinks}
+                            </div>
+                        </div>`;
+                });
+
+                document.querySelectorAll('.menu-toggle').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        const target = document.getElementById(btn.dataset.target);
+                        target.classList.toggle('hidden');
+                    });
+                });
+            },
+
+            render(market, groupNum) {
+                document.getElementById('landingView').style.display = 'none';
+                const view = document.getElementById('reportView');
+                view.classList.add('active');
+                document.getElementById('navSidebar').classList.remove('active');
+
+                const gData = siteData[market].groups[groupNum];
+                document.getElementById('reportHeader').innerHTML = `
+                    <div class="bg-blue-600 p-12 md:p-20 rounded-[50px] shadow-2xl">
+                        <span class="text-white/70 uppercase tracking-[0.4em] text-[10px] mb-4 block">Case Analysis Portfolio</span>
+                        <h2 class="text-5xl md:text-8xl font-black mb-4 text-white">${market}</h2>
+                        <p class="text-xl md:text-2xl font-light italic text-blue-100">Group ${groupNum} Observation • ${siteData[market].theory}</p>
+                    </div>`;
+
+                document.getElementById('reportGrid').innerHTML = `
+                    <div class="glass-panel p-10 md:p-16 rounded-[50px]">
+                        <h3 class="text-3xl font-bold mb-10 flex items-center gap-4 text-white"><i data-lucide="eye" class="text-blue-500"></i> Observations</h3>
+                        <ul class="space-y-6 text-slate-400 text-lg">${gData.obs.map(p => `<li class="flex gap-4"><i data-lucide="check" class="text-blue-500 mt-1 flex-shrink-0"></i> <span>${p}</span></li>`).join('')}</ul>
+                    </div>
+                    <div class="glass-panel p-10 md:p-16 rounded-[50px]">
+                        <h3 class="text-3xl font-bold mb-10 flex items-center gap-4 text-white"><i data-lucide="zap" class="text-green-500"></i> Selling Tactics</h3>
+                        <ul class="space-y-6 text-slate-400 text-lg">${gData.tactics.map(p => `<li class="flex gap-4"><i data-lucide="arrow-right" class="text-green-500 mt-1 flex-shrink-0"></i> <span>${p}</span></li>`).join('')}</ul>
+                    </div>`;
+
+                lucide.createIcons();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        };
+
+        App.init();
+    </script>
+</body>
+</html>
