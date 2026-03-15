@@ -9,54 +9,27 @@
     <style>
         body { font-family: 'Plus Jakarta Sans', sans-serif; background: #020617; color: #f8fafc; overflow-x: hidden; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; }
-
         header { background: linear-gradient(to bottom, rgba(2, 6, 23, 0.9), transparent); backdrop-filter: blur(8px); }
-
         #navSidebar {
             transform: translateX(-100%);
             transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
             background: rgba(2, 6, 23, 0.98);
             backdrop-filter: blur(25px);
             border-right: 1px solid rgba(255,255,255,0.05);
-            display: block !important; /* Ensure it's not hidden by display:none */
         }
         #navSidebar.active { transform: translateX(0); }
-
         .hero-gradient {
-            background: linear-gradient(rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0.85)), 
-                        url('WeSchool.jpg'); /* Fixed filename case */
-            background-size: cover; 
-            background-position: center center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            background: linear-gradient(rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0.85)), url('WeSchool.jpg');
+            background-size: cover; background-position: center; background-repeat: no-repeat; background-attachment: fixed;
+            min-height: 100vh; display: flex; align-items: center; justify-content: center;
         }
-
         .page-view { display: none; opacity: 0; transform: translateY(20px); transition: all 0.5s ease; }
         .page-view.active { display: block; opacity: 1; transform: translateY(0); }
-
-        .glass-panel { 
-            background: rgba(255, 255, 255, 0.03); 
-            backdrop-filter: blur(10px); 
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .team-badge {
-            background: rgba(59, 130, 246, 0.1);
-            border: 1px solid rgba(59, 130, 246, 0.3);
-            padding: 4px 12px;
-            border-radius: 99px;
-            font-size: 0.75rem;
-            color: #60a5fa;
-            font-weight: 600;
-        }
+        .glass-panel { background: rgba(255, 255, 255, 0.03); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.05); }
+        .team-badge { background: rgba(59, 130, 246, 0.1); border: 1px solid rgba(59, 130, 246, 0.3); padding: 4px 12px; border-radius: 99px; font-size: 0.75rem; color: #60a5fa; font-weight: 600; }
     </style>
 </head>
 <body>
-
     <header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 md:px-12 py-6">
         <button id="openMenu" class="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:scale-110 transition-all">
             <i data-lucide="menu" class="w-6 h-6"></i>
@@ -70,15 +43,10 @@
     <aside id="navSidebar" class="fixed inset-y-0 left-0 z-[60] w-full md:w-[450px] p-12 overflow-y-auto">
         <div class="flex justify-between items-center mb-10">
             <h3 class="text-blue-500 font-bold uppercase tracking-widest text-[10px]">Directory</h3>
-            <button id="closeMenu" class="text-slate-500 hover:text-white transition">
-                <i data-lucide="x" class="w-8 h-8"></i>
-            </button>
+            <button id="closeMenu" class="text-slate-500 hover:text-white transition"><i data-lucide="x" class="w-8 h-8"></i></button>
         </div>
         <button id="goHome" class="flex items-center gap-4 text-3xl font-bold text-white hover:text-blue-500 transition-colors mb-12 group">
-            <span class="bg-white/5 p-3 rounded-2xl group-hover:bg-blue-600 transition-all">
-                <i data-lucide="home" class="w-6 h-6"></i>
-            </span>
-            Back to Home
+            <span class="bg-white/5 p-3 rounded-2xl group-hover:bg-blue-600 transition-all"><i data-lucide="home" class="w-6 h-6"></i></span> Back to Home
         </button>
         <nav id="menuContainer" class="space-y-8"></nav>
     </aside>
@@ -86,45 +54,13 @@
     <div id="landingView" class="page-view active">
         <section class="hero-gradient px-6 text-center">
             <div>
-                <span class="mb-6 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-[0.3em] backdrop-blur-md">
-                    Welingkar Mumbai Campus
-                </span>
-                <h1 class="text-6xl md:text-9xl font-black mb-8 leading-[0.85] tracking-tighter text-white">
-                    Selling & Negotiation <br><span class="text-blue-500 italic font-light">DYNAMICS</span>
-                </h1>
-                <p class="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light drop-shadow-lg">
-                    An experiential deep-dive into the selling and negotiation landscapes of Mumbai.
-                </p>
-                <button onclick="document.getElementById('openMenu').click()" class="bg-blue-600 text-white px-12 py-5 font-bold uppercase tracking-widest hover:bg-blue-700 transition-all rounded-full shadow-2xl shadow-blue-500/40">
-                    Explore The Study
-                </button>
+                <span class="mb-6 px-4 py-2 rounded-full border border-blue-500/30 bg-blue-500/10 text-blue-400 text-[10px] font-bold uppercase tracking-[0.3em] backdrop-blur-md">Welingkar Mumbai Campus</span>
+                <h1 class="text-6xl md:text-9xl font-black mb-8 leading-[0.85] tracking-tighter text-white">Selling & Negotiation <br><span class="text-blue-500 italic font-light">DYNAMICS</span></h1>
+                <p class="text-slate-200 text-lg md:text-xl max-w-2xl mx-auto mb-12 font-light drop-shadow-lg">An experiential deep-dive into the selling and negotiation landscapes of Mumbai.</p>
+                <button onclick="document.getElementById('openMenu').click()" class="bg-blue-600 text-white px-12 py-5 font-bold uppercase tracking-widest hover:bg-blue-700 transition-all rounded-full shadow-2xl shadow-blue-500/40">Explore The Study</button>
             </div>
         </section>
-
-        <section class="py-32 px-8 bg-white text-slate-900">
-            <div class="max-w-6xl mx-auto">
-                <span class="text-blue-600 font-bold uppercase tracking-[0.3em] text-[10px] mb-4 block">Section 1.1</span>
-                <h2 class="text-5xl font-bold mb-10 text-slate-950">Purpose of the Field Study</h2>
-                <div class="grid md:grid-cols-2 gap-16 items-center">
-                    <div class="text-lg leading-relaxed text-slate-600 border-r border-slate-100 pr-8 text-justify">
-                        <p>This study, conducted at WeSchool Mumbai, focuses on stepping beyond classroom theory to observe real-world negotiation in diverse retail environments. It aims to build practical skills in reading body language and calibrating pitches to buyer moods.</p>
-                    </div>
-                    <div class="pl-4 text-right">
-                        <p class="text-2xl md:text-4xl font-bold text-slate-800 leading-tight mb-6 italic">
-                            "Life is all about <span class="text-blue-600 font-extrabold not-italic">SALE</span>, everyone has to do it."
-                        </p>
-                        <div class="flex items-center justify-end gap-3 text-right">
-                            <div class="w-12 h-[2px] bg-blue-600"></div>
-                            <div>
-                                <p class="text-sm font-extrabold uppercase tracking-widest text-blue-600">Dr. Nilesh Kulkarni</p>
-                                <p class="text-[10px] text-slate-400 font-bold uppercase tracking-widest">Ass.Professor | WeSchool Mumbai</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>
+        </div>
 
     <main id="reportView" class="page-view pt-32 pb-40 px-6">
         <div class="max-w-7xl mx-auto">
@@ -134,124 +70,88 @@
         </div>
     </main>
 
-    <footer class="bg-slate-950 py-16 text-center border-t border-white/5 text-slate-600 text-[10px] uppercase tracking-[0.5em]">
-        &copy; 2026 WeSchool | PGDM Selling & Negotiation Project
-    </footer>
-
     <script>
         const siteData = {
             'Dadar Market': { 
                 theory: 'Distributive Bargaining', 
                 groups: { 
-                    1: { team: ['Sushant Ghadge (37)', 'Yash Savla (31)', 'Riya Singh (18)', 'Siddharth (15)', 'Ananya (04)', 'Kunal (12)'], obs: ['High intensity footfall creates urgency', 'Aggressive price anchoring starts 50% high', 'Crowded environment reduces buyer thinking time', 'Product variety leads to high comparison shopping', 'Vendor proximity creates intense price wars', 'Impulse buying is driven by visual display'], tactics: ['Extreme high-ball initial pricing', 'Emotional appeals ("Bohni" deals)', 'Fake scarcity (last piece available)', 'Walk-away counter-offers', 'Bundling multiple cheap accessories', 'Aggressive verbal "hooks" to passersby'] },
-                    2: { team: ['Aditya (01)', 'Bhavya (05)', 'Chaitanya (07)', 'Deep (09)', 'Esha (11)', 'Farhan (13)'], obs: ['Strong focus on female demographic needs', 'Seasonal trends drive inventory turnover', 'Street light placement affects late-evening sales', 'Buyer body language is the key tell for vendors', 'Payment mode preference (cash/UPI) shifts speed', 'Bargaining "rhythm" changes based on vendor age'], tactics: ['Mirroring buyer enthusiasm', 'Offering "Best Friend" special discounts', 'Using family-oriented persuasion', 'Highlighting celebrity-inspired styles', 'Rapid-fire feature listing', 'Non-verbal pressure through stall blocking'] },
-                    3: { team: ['Gaurav (14)', 'Hina (16)', 'Ishaan (17)', 'Jiya (19)', 'Karan (20)', 'Lata (21)'], obs: ['Ethnic wear dominance in specific lanes', 'Buyer silence used as a powerful weapon', 'Group shopping dynamics (friends vs solo)', 'Physical handling of fabric is critical', 'Store-front vs pavement vendor differences', 'Noise levels impacting negotiation clarity'], tactics: ['Flattery based on style choices', 'The "I am losing money" defense', 'Using regional language for trust', 'Comparing street prices to mall prices', 'Stepped discounts (decreasing increments)', 'Free small add-ons to close big sales'] },
-                    4: { team: ['Manas (22)', 'Nia (23)', 'Om (24)', 'Pooja (25)', 'Qasim (26)', 'Rohan (27)'], obs: ['Rapid price shifts based on buyer attire', 'Ignored low-ball offers to filter buyers', 'Stall placement impacts leverage (corners best)', 'Competitive intelligence between neighbors', 'Stock depletion as a closing signal', 'Focus on immediate transactional value'], tactics: ['Visual anchoring through price tags', 'The "Final offer" ultimatum', 'Creating a crowd to attract more buyers', 'Quick-close during heavy rain/sun', 'Using humor to lower buyer guards', 'Selective feature highlighting'] },
-                    5: { team: ['Sana (28)', 'Tanmay (29)', 'Uday (30)', 'Vidhi (32)', 'Waqar (33)', 'Xena (34)'], obs: ['Focus on utility over brand name', 'Impact of transit passengers from station', 'Bargaining endurance levels of buyers', 'Repetitive queries regarding durability', 'Gender-based pricing differences observed', 'Peak hour "no-negotiation" zones'], tactics: ['Volume-based pricing (buy 3 for less)', 'Direct comparison to "branded" items', 'Physical stress tests of material', 'The "Take it or leave it" stance', 'Guaranteed lowest price claims', 'Personalized service for repeat buyers'] },
-                    6: { team: ['Yash (35)', 'Zaid (36)', 'Aarav (02)', 'Bela (06)', 'Chetan (08)', 'Diva (10)'], obs: ['High visual saturation of colors', 'Buyer FOMO (Fear Of Missing Out) tactics', 'Vendor collaboration against aggressive buyers', 'Impact of social media trends on stock', 'Quick transaction cycles (< 5 minutes)', 'Mobile phone distractions during bargaining'], tactics: ['Social proof ("Everyone is buying this")', 'Limited-time offer psychological pressure', 'Bundled "Combo" deals for quick exit', 'Highlighting unique/exclusive patterns', 'Using aggressive hand gestures', 'Offering trial/drape assistance'] },
-                    7: { team: ['Ekta (38)', 'Faizan (39)', 'Gauri (40)', 'Harsh (41)', 'Indu (42)', 'Jay (43)'], obs: ['Closing techniques based on buyer mood', 'Impact of evening lighting on texture perception', 'Vendor fatigue impacting late-day leverage', 'Buyer "inspection" techniques observed', 'Secondary sales (upselling matching items)', 'Impact of market layout on foot traffic'], tactics: ['The "Add-on" surprise at final payment', 'Last-minute price drops to secure deal', 'Validating the buyer\'s negotiation skill', 'Creating "Customized" sets on the spot', 'Using kids/family to build rapport', 'Aggressive follow-up to "walk-aways"'] }
+                    1: { team: ['Sushant Ghadge (37)', 'Yash Savla (31)'], obs: ['High intensity footfall creates urgency', 'Aggressive price anchoring starts 50% high', 'Crowded environment reduces thinking time'], tactics: ['Extreme high-ball initial pricing', 'Emotional appeals ("Bohni" deals)'] },
+                    2: { team: ['Aditya (01)', 'Bhavya (05)'], obs: ['Strong focus on female demographic needs', 'Seasonal trends drive inventory'], tactics: ['Mirroring buyer enthusiasm', 'Family-oriented persuasion'] },
+                    3: { team: ['Gaurav (14)', 'Hina (16)'], obs: ['Ethnic wear dominance in specific lanes', 'Buyer silence used as weapon'], tactics: ['Flattery based on style', 'Using regional language for trust'] },
+                    4: { team: ['Manas (22)', 'Nia (23)'], obs: ['Price shifts based on buyer attire', 'Ignored low-ball offers'], tactics: ['Visual anchoring via tags', 'The "Final offer" ultimatum'] },
+                    5: { team: ['Sana (28)', 'Tanmay (29)'], obs: ['Utility focus over brand', 'Impact of transit passengers'], tactics: ['Volume-based pricing', 'Physical stress tests'] },
+                    6: { team: ['Yash (35)', 'Zaid (36)'], obs: ['High visual saturation of colors', 'Buyer FOMO tactics'], tactics: ['Social proof claims', 'Bundled "Combo" deals'] },
+                    7: { team: ['Ekta (38)', 'Faizan (39)'], obs: ['Closing based on buyer mood', 'Evening lighting texture perception'], tactics: ['Add-on surprise at final payment', 'Validating negotiation skill'] }
                 } 
             },
             'Sion Leather Market': { 
                 theory: 'Value-Based Selling', 
                 groups: { 
-                    1: { team: ['Sushant Ghadge (37)', 'Yash Savla (31)'], obs: ['Deep product knowledge is the primary tool', 'Focus on leather grades and tanning', 'Low footfall but high conversion rate', 'Artisanal aura increases perceived value', 'Buyers value durability over fashion trends', 'Workshop-direct sales build trust'], tactics: ['Burn tests to prove authenticity', 'Detailed explanation of hide origins', 'Comparison of grain textures', 'Customization offers on-site', 'Long-term warranty promises', 'Educating the buyer on leather care'] }
-                    // Additional groups follow same structure
+                    1: { team: ['Group 1 Members'], obs: ['Deep product knowledge is primary tool', 'Leather grade focus'], tactics: ['Burn tests for authenticity', 'Longevity education'] },
+                    2: { team: ['Group 2 Members'], obs: ['Win-win mindset observed', 'Handmade vs Machine focus'], tactics: ['Educational storytelling', 'Workshop-direct savings'] },
+                    3: { team: ['Group 3 Members'], obs: ['Narrative-driven sales pitches', 'Longevity focus'], tactics: ['Visual stitching demos', 'Exclusive "One-piece" pitch'] },
+                    4: { team: ['Group 4 Members'], obs: ['Quality certification tool', 'Export-quality claims'], tactics: ['Material stress tests', 'Tiered hide pricing'] },
+                    5: { team: ['Group 5 Members'], obs: ['Utility over fashion focus', 'Zippery/Hardware focus'], tactics: ['Demonstrating seam strength', 'Repair service offers'] },
+                    6: { team: ['Group 6 Members'], obs: ['Bespoke manufacturing focus', 'Small batch production'], tactics: ['Design consultations', 'Artisanal branding'] },
+                    7: { team: ['Group 7 Members'], obs: ['Grade variation as anchor', 'Seasonal demand (jackets)'], tactics: ['Premium Grade A anchoring', 'Expedited production times'] }
                 } 
             },
             'Masjid Bandar': { 
                 theory: 'Integrative Negotiation', 
                 groups: { 
-                    1: { team: ['Sushant Ghadge (37)', 'Yash Savla (31)'], obs: ['Analytical, volume-based negotiations', 'Relationship-first business model', 'Focus on bulk supply and logistics', 'Information asymmetry in market pricing', 'Credit-based transaction trust', 'Impact of global commodity prices'], tactics: ['Tiered pricing based on weight', 'Volume discount anchoring', 'Bundling different spice grades', 'Long-term contract negotiation', 'Trade-off on delivery timelines', 'Direct farm-to-wholesale price edge'] }
+                    1: { team: ['Group 1 Members'], obs: ['Analytical volume-based deals', 'Logistics focus'], tactics: ['Tiered bulk weight pricing', 'Long-term contracts'] },
+                    2: { team: ['Group 2 Members'], obs: ['Price locks and futures', 'Margin psychology'], tactics: ['Credit terms for loyalty', 'Freight cost negotiation'] },
+                    3: { team: ['Group 3 Members'], obs: ['Trade agent middlemen role', 'Sample quality focus'], tactics: ['Sampling highest grade first', 'Supply scarcity info'] },
+                    4: { team: ['Group 4 Members'], obs: ['Formalizing informal deals', 'Turnover speed focus'], tactics: ['Consistent supply assurance', 'Market rate anchoring'] },
+                    5: { team: ['Group 5 Members'], obs: ['Creditworthiness as lever', 'Warehouse proximity'], tactics: ['Flexible credit cycles', 'Bulk storage solutions'] },
+                    6: { team: ['Group 6 Members'], obs: ['Supply stability focus', 'Trust over minor losses'], tactics: ['Partner narrative building', 'Absorbing price hikes'] },
+                    7: { team: ['Group 7 Members'], obs: ['Network procurement edge', 'Currency import impact'], tactics: ['Family-run trust leverage', 'Shortage supply assurance'] }
                 } 
             },
             'Inorbit Mall': { 
                 theory: 'Consultative Retail', 
                 groups: { 
-                    1: { team: ['Sushant Ghadge (37)', 'Yash Savla (31)'], obs: ['Fixed-price, no-bargain environment', 'Consultative selling by staff', 'High reliance on brand image', 'Buyer focus on experience/service', 'Ambiance-driven purchase intent', 'Product testing/trials available'], tactics: ['Cross-selling related accessories', 'Upselling premium versions', 'Highlighting warranty/return benefits', 'Membership program recruitment', 'Limited-time seasonal "Sale"', 'Using lighting to enhance product'] }
+                    1: { team: ['Group 1 Members'], obs: ['Fixed-price environment', 'Consultative staff'], tactics: ['Cross-selling accessories', 'Upselling premium versions'] },
+                    2: { team: ['Group 2 Members'], obs: ['Digital tools in sales', 'Warranty reliance'], tactics: ['Value-pack bundling', 'Membership recruitment'] },
+                    3: { team: ['Group 3 Members'], obs: ['High-margin floor pathing', 'VIP tier service'], tactics: ['Exclusivity membership', 'Personal shopper help'] },
+                    4: { team: ['Group 4 Members'], obs: ['Red-tag psychological impact', 'Gift-with-purchase'], tactics: ['Buy 2 Get 1 psychology', 'Free gift thresholds'] },
+                    5: { team: ['Group 5 Members'], obs: ['Lighting focus guidance', 'Dwell time air-con impact'], tactics: ['Strategic product placement', 'Celebrity endorsements'] },
+                    6: { team: ['Group 6 Members'], obs: ['Loyalty program effectiveness', 'Standardized protocols'], tactics: ['Tiered rewards systems', 'Pre-order next season'] },
+                    7: { team: ['Group 7 Members'], obs: ['Returns as risk reverser', 'Packaging perception'], tactics: ['No-questions returns', 'Premium gift wrapping'] }
                 } 
             }
         };
 
         const App = {
-            init() { 
-                this.buildNav(); 
-                this.bindEvents(); 
-                lucide.createIcons(); 
-            },
+            init() { this.buildNav(); this.bindEvents(); lucide.createIcons(); },
             bindEvents() {
                 const sidebar = document.getElementById('navSidebar');
-                document.getElementById('openMenu').addEventListener('click', () => {
-                    sidebar.classList.add('active');
-                });
-                document.getElementById('closeMenu').addEventListener('click', () => {
-                    sidebar.classList.remove('active');
-                });
+                document.getElementById('openMenu').addEventListener('click', () => sidebar.classList.add('active'));
+                document.getElementById('closeMenu').addEventListener('click', () => sidebar.classList.remove('active'));
                 document.getElementById('goHome').addEventListener('click', () => {
                     document.getElementById('landingView').style.display = 'block';
                     document.getElementById('reportView').classList.remove('active');
                     sidebar.classList.remove('active');
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 });
             },
             buildNav() {
                 const container = document.getElementById('menuContainer');
-                container.innerHTML = ''; // Clear previous
                 Object.keys(siteData).forEach(loc => {
                     const safeId = loc.replace(/\s+/g, '');
-                    const subLinks = [1,2,3,4,5,6,7].map(g => {
-                        // Check if group exists for this location to avoid errors
-                        if(siteData[loc].groups[g]) {
-                            return `<button onclick="App.render('${loc}', ${g})" class="block w-full text-left py-2 hover:text-white transition-all">Group ${g} Report</button>`;
-                        }
-                        return '';
-                    }).join('');
-
-                    container.innerHTML += `
-                        <div class="border-b border-white/5 pb-6">
-                            <button class="menu-toggle text-3xl font-bold flex items-center justify-between w-full hover:text-blue-500 text-white transition-all" data-target="sub-${safeId}">
-                                ${loc} <i data-lucide="chevron-down" class="w-6 h-6"></i>
-                            </button>
-                            <div id="sub-${safeId}" class="hidden pl-8 mt-4 space-y-3 text-xl text-slate-400 border-l border-blue-600/30">
-                                ${subLinks}
-                            </div>
-                        </div>`;
+                    const subLinks = [1,2,3,4,5,6,7].map(g => `<button onclick="App.render('${loc}', ${g})" class="block w-full text-left py-2 hover:text-white transition-all">Group ${g} Report</button>`).join('');
+                    container.innerHTML += `<div class="border-b border-white/5 pb-6"><button class="menu-toggle text-3xl font-bold flex items-center justify-between w-full hover:text-blue-500 text-white transition-all" data-target="sub-${safeId}">${loc} <i data-lucide="chevron-down" class="w-6 h-6"></i></button><div id="sub-${safeId}" class="hidden pl-8 mt-4 space-y-3 text-xl text-slate-400 border-l border-blue-600/30">${subLinks}</div></div>`;
                 });
-                
-                document.querySelectorAll('.menu-toggle').forEach(btn => {
-                    btn.addEventListener('click', () => {
-                        const target = document.getElementById(btn.dataset.target);
-                        target.classList.toggle('hidden');
-                    });
-                });
+                document.querySelectorAll('.menu-toggle').forEach(btn => btn.addEventListener('click', () => document.getElementById(btn.dataset.target).classList.toggle('hidden')));
             },
             render(market, groupNum) {
                 document.getElementById('landingView').style.display = 'none';
                 const view = document.getElementById('reportView');
                 view.classList.add('active');
                 document.getElementById('navSidebar').classList.remove('active');
-                
                 const gData = siteData[market].groups[groupNum];
-                document.getElementById('reportHeader').innerHTML = `
-                    <div class="bg-blue-600 p-12 md:p-16 rounded-[40px] shadow-2xl">
-                        <h2 class="text-4xl md:text-6xl font-black mb-2 text-white">${market}</h2>
-                        <p class="text-lg md:text-xl font-light italic text-blue-100">Group ${groupNum} Observation • ${siteData[market].theory}</p>
-                    </div>`;
-                
-                document.getElementById('teamSection').innerHTML = `
-                    <span class="text-xs uppercase tracking-widest text-slate-500 w-full mb-2">Team Members:</span>` + 
-                    gData.team.map(name => `<span class="team-badge">${name}</span>`).join('');
-                
-                document.getElementById('reportGrid').innerHTML = `
-                    <div class="glass-panel p-10 rounded-[40px]">
-                        <h3 class="text-2xl font-bold mb-6 text-white">Observations</h3>
-                        <ul class="space-y-4 text-slate-400 text-md">${gData.obs.map(p => `<li>• ${p}</li>`).join('')}</ul>
-                    </div>
-                    <div class="glass-panel p-10 rounded-[40px]">
-                        <h3 class="text-2xl font-bold mb-6 text-white">Tactics</h3>
-                        <ul class="space-y-4 text-slate-400 text-md">${gData.tactics.map(p => `<li>• ${p}</li>`).join('')}</ul>
-                    </div>`;
-                
+                document.getElementById('reportHeader').innerHTML = `<div class="bg-blue-600 p-12 rounded-[40px] shadow-2xl"><h2 class="text-4xl font-black mb-2 text-white">${market}</h2><p class="text-lg italic text-blue-100">Group ${groupNum} • ${siteData[market].theory}</p></div>`;
+                document.getElementById('teamSection').innerHTML = `<span class="text-xs uppercase tracking-widest text-slate-500 w-full mb-2">Team Members:</span>` + gData.team.map(name => `<span class="team-badge">${name}</span>`).join('');
+                document.getElementById('reportGrid').innerHTML = `<div class="glass-panel p-10 rounded-[40px]"><h3 class="text-2xl font-bold mb-6 text-white">Observations</h3><ul class="space-y-4 text-slate-400 text-md">${gData.obs.map(p => `<li>• ${p}</li>`).join('')}</ul></div><div class="glass-panel p-10 rounded-[40px]"><h3 class="text-2xl font-bold mb-6 text-white">Tactics</h3><ul class="space-y-4 text-slate-400 text-md">${gData.tactics.map(p => `<li>• ${p}</li>`).join('')}</ul></div>`;
                 lucide.createIcons();
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             }
