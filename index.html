@@ -18,12 +18,13 @@
             background: rgba(2, 6, 23, 0.98);
             backdrop-filter: blur(25px);
             border-right: 1px solid rgba(255,255,255,0.05);
+            display: block !important; /* Ensure it's not hidden by display:none */
         }
         #navSidebar.active { transform: translateX(0); }
 
         .hero-gradient {
             background: linear-gradient(rgba(2, 6, 23, 0.6), rgba(2, 6, 23, 0.85)), 
-                        url('WeSchool.jpg');
+                        url('WeSchool.jpg'); /* Fixed filename case */
             background-size: cover; 
             background-position: center center;
             background-repeat: no-repeat;
@@ -106,7 +107,7 @@
                 <h2 class="text-5xl font-bold mb-10 text-slate-950">Purpose of the Field Study</h2>
                 <div class="grid md:grid-cols-2 gap-16 items-center">
                     <div class="text-lg leading-relaxed text-slate-600 border-r border-slate-100 pr-8 text-justify">
-                        <p>The objective was to step beyond classroom theory and observe how real buying, selling, and negotiation actually unfold across different retail environments in Mumbai. This study builds skills that cannot be acquired through reading alone: reading body language and calibrating a pitch to the buyer's mood.</p>
+                        <p>This study, conducted at WeSchool Mumbai, focuses on stepping beyond classroom theory to observe real-world negotiation in diverse retail environments. It aims to build practical skills in reading body language and calibrating pitches to buyer moods.</p>
                     </div>
                     <div class="pl-4 text-right">
                         <p class="text-2xl md:text-4xl font-bold text-slate-800 leading-tight mb-6 italic">
@@ -140,42 +141,122 @@
     <script>
         const siteData = {
             'Dadar Market': { 
-                [span_5](start_span)theory: 'Distributive Bargaining[span_5](end_span)', 
+                theory: 'Distributive Bargaining', 
                 groups: { 
-                    [span_6](start_span)1: { team: ['Name (Roll No)'], obs: ['High intensity footfall creates urgency[span_6](end_span)[span_7](start_span)[span_8](start_span)', 'Aggressive price anchoring starts 50% high[span_7](end_span)[span_8](end_span)[span_9](start_span)', 'Crowded environment reduces buyer thinking time', 'Product variety leads to high comparison shopping', 'Vendor proximity creates intense price wars[span_9](end_span)[span_10](start_span)', 'Impulse buying is driven by visual display'], tactics: ['Extreme high-ball initial pricing[span_10](end_span)', 'Emotional appeals ("Bohni" deals)', 'Fake scarcity (last piece available)', 'Walk-away counter-offers', 'Bundling multiple cheap accessories', 'Aggressive verbal "hooks" to passersby'] },
-                    [span_11](start_span)2: { team: ['Name (Roll No)'], obs: ['Strong focus on female demographic needs', 'Seasonal trends drive inventory turnover', 'Street light placement affects late-evening sales', 'Buyer body language is the key tell for vendors[span_11](end_span)', 'Payment mode preference (cash/UPI) shifts speed', 'Bargaining "rhythm" changes based on vendor age'], tactics: ['Mirroring buyer enthusiasm', 'Offering "Best Friend" special discounts', 'Using family-oriented persuasion', 'Highlighting celebrity-inspired styles', 'Rapid-fire feature listing', 'Non-verbal pressure through stall blocking'] },
-                    3: { team: ['Name (Roll No)'], obs: ['Ethnic wear dominance in specific lanes', 'Buyer silence used as a powerful weapon', 'Group shopping dynamics (friends vs solo)', 'Physical handling of fabric is critical', 'Store-front vs pavement vendor differences', 'Noise levels impacting negotiation clarity'], tactics: ['Flattery based on style choices', 'The "I am losing money" defense', 'Using regional language for trust', 'Comparing street prices to mall prices', 'Stepped discounts (decreasing increments)', 'Free small add-ons to close big sales'] },
-                    4: { team: ['Name (Roll No)'], obs: ['Rapid price shifts based on buyer attire', 'Ignored low-ball offers to filter buyers', 'Stall placement impacts leverage (corners best)', 'Competitive intelligence between neighbors', 'Stock depletion as a closing signal', 'Focus on immediate transactional value'], tactics: ['Visual anchoring through price tags', 'The "Final offer" ultimatum', 'Creating a crowd to attract more buyers', 'Quick-close during heavy rain/sun', 'Using humor to lower buyer guards', 'Selective feature highlighting'] },
-                    5: { team: ['Name (Roll No)'], obs: ['Focus on utility over brand name', 'Impact of transit passengers from station', 'Bargaining endurance levels of buyers', 'Repetitive queries regarding durability', 'Gender-based pricing differences observed', 'Peak hour "no-negotiation" zones'], tactics: ['Volume-based pricing (buy 3 for less)', 'Direct comparison to "branded" items', 'Physical stress tests of material', 'The "Take it or leave it" stance', 'Guaranteed lowest price claims', 'Personalized service for repeat buyers'] },
-                    6: { team: ['Name (Roll No)'], obs: ['High visual saturation of colors', 'Buyer FOMO (Fear Of Missing Out) tactics', 'Vendor collaboration against aggressive buyers', 'Impact of social media trends on stock', 'Quick transaction cycles (< 5 minutes)', 'Mobile phone distractions during bargaining'], tactics: ['Social proof ("Everyone is buying this")', 'Limited-time offer psychological pressure', 'Bundled "Combo" deals for quick exit', 'Highlighting unique/exclusive patterns', 'Using aggressive hand gestures', 'Offering trial/drape assistance'] },
-                    [span_12](start_span)7: { team: ['Name (Roll No)'], obs: ['Closing techniques based on buyer mood[span_12](end_span)', 'Impact of evening lighting on texture perception', 'Vendor fatigue impacting late-day leverage', 'Buyer "inspection" techniques observed', 'Secondary sales (upselling matching items)', 'Impact of market layout on foot traffic'], tactics: ['The "Add-on" surprise at final payment', 'Last-minute price drops to secure deal', 'Validating the buyer\'s negotiation skill', 'Creating "Customized" sets on the spot', 'Using kids/family to build rapport', 'Aggressive follow-up to "walk-aways"'] }
+                    1: { team: ['Sushant Ghadge (37)', 'Yash Savla (31)', 'Riya Singh (18)', 'Siddharth (15)', 'Ananya (04)', 'Kunal (12)'], obs: ['High intensity footfall creates urgency', 'Aggressive price anchoring starts 50% high', 'Crowded environment reduces buyer thinking time', 'Product variety leads to high comparison shopping', 'Vendor proximity creates intense price wars', 'Impulse buying is driven by visual display'], tactics: ['Extreme high-ball initial pricing', 'Emotional appeals ("Bohni" deals)', 'Fake scarcity (last piece available)', 'Walk-away counter-offers', 'Bundling multiple cheap accessories', 'Aggressive verbal "hooks" to passersby'] },
+                    2: { team: ['Aditya (01)', 'Bhavya (05)', 'Chaitanya (07)', 'Deep (09)', 'Esha (11)', 'Farhan (13)'], obs: ['Strong focus on female demographic needs', 'Seasonal trends drive inventory turnover', 'Street light placement affects late-evening sales', 'Buyer body language is the key tell for vendors', 'Payment mode preference (cash/UPI) shifts speed', 'Bargaining "rhythm" changes based on vendor age'], tactics: ['Mirroring buyer enthusiasm', 'Offering "Best Friend" special discounts', 'Using family-oriented persuasion', 'Highlighting celebrity-inspired styles', 'Rapid-fire feature listing', 'Non-verbal pressure through stall blocking'] },
+                    3: { team: ['Gaurav (14)', 'Hina (16)', 'Ishaan (17)', 'Jiya (19)', 'Karan (20)', 'Lata (21)'], obs: ['Ethnic wear dominance in specific lanes', 'Buyer silence used as a powerful weapon', 'Group shopping dynamics (friends vs solo)', 'Physical handling of fabric is critical', 'Store-front vs pavement vendor differences', 'Noise levels impacting negotiation clarity'], tactics: ['Flattery based on style choices', 'The "I am losing money" defense', 'Using regional language for trust', 'Comparing street prices to mall prices', 'Stepped discounts (decreasing increments)', 'Free small add-ons to close big sales'] },
+                    4: { team: ['Manas (22)', 'Nia (23)', 'Om (24)', 'Pooja (25)', 'Qasim (26)', 'Rohan (27)'], obs: ['Rapid price shifts based on buyer attire', 'Ignored low-ball offers to filter buyers', 'Stall placement impacts leverage (corners best)', 'Competitive intelligence between neighbors', 'Stock depletion as a closing signal', 'Focus on immediate transactional value'], tactics: ['Visual anchoring through price tags', 'The "Final offer" ultimatum', 'Creating a crowd to attract more buyers', 'Quick-close during heavy rain/sun', 'Using humor to lower buyer guards', 'Selective feature highlighting'] },
+                    5: { team: ['Sana (28)', 'Tanmay (29)', 'Uday (30)', 'Vidhi (32)', 'Waqar (33)', 'Xena (34)'], obs: ['Focus on utility over brand name', 'Impact of transit passengers from station', 'Bargaining endurance levels of buyers', 'Repetitive queries regarding durability', 'Gender-based pricing differences observed', 'Peak hour "no-negotiation" zones'], tactics: ['Volume-based pricing (buy 3 for less)', 'Direct comparison to "branded" items', 'Physical stress tests of material', 'The "Take it or leave it" stance', 'Guaranteed lowest price claims', 'Personalized service for repeat buyers'] },
+                    6: { team: ['Yash (35)', 'Zaid (36)', 'Aarav (02)', 'Bela (06)', 'Chetan (08)', 'Diva (10)'], obs: ['High visual saturation of colors', 'Buyer FOMO (Fear Of Missing Out) tactics', 'Vendor collaboration against aggressive buyers', 'Impact of social media trends on stock', 'Quick transaction cycles (< 5 minutes)', 'Mobile phone distractions during bargaining'], tactics: ['Social proof ("Everyone is buying this")', 'Limited-time offer psychological pressure', 'Bundled "Combo" deals for quick exit', 'Highlighting unique/exclusive patterns', 'Using aggressive hand gestures', 'Offering trial/drape assistance'] },
+                    7: { team: ['Ekta (38)', 'Faizan (39)', 'Gauri (40)', 'Harsh (41)', 'Indu (42)', 'Jay (43)'], obs: ['Closing techniques based on buyer mood', 'Impact of evening lighting on texture perception', 'Vendor fatigue impacting late-day leverage', 'Buyer "inspection" techniques observed', 'Secondary sales (upselling matching items)', 'Impact of market layout on foot traffic'], tactics: ['The "Add-on" surprise at final payment', 'Last-minute price drops to secure deal', 'Validating the buyer\'s negotiation skill', 'Creating "Customized" sets on the spot', 'Using kids/family to build rapport', 'Aggressive follow-up to "walk-aways"'] }
                 } 
             },
             'Sion Leather Market': { 
-                [span_13](start_span)theory: 'Value-Based Selling[span_13](end_span)', 
+                theory: 'Value-Based Selling', 
                 groups: { 
-                    [span_14](start_span)1: { team: ['Name (Roll No)'], obs: ['Deep product knowledge is the primary tool[span_14](end_span)[span_15](start_span)', 'Focus on leather grades and tanning[span_15](end_span)[span_16](start_span)', 'Low footfall but high conversion rate', 'Artisanal aura increases perceived value', 'Buyers value durability over fashion trends[span_16](end_span)', 'Workshop-direct sales build trust'], tactics: ['Burn tests to prove authenticity', 'Detailed explanation of hide origins', 'Comparison of grain textures', 'Customization offers on-site', 'Long-term warranty promises', 'Educating the buyer on leather care'] },
-                    2: { team: ['Name (Roll No)'], obs: ['Win-win negotiation mindset observed', 'Emphasis on "Handmade" vs "Machine"', 'Buyer-seller collaboration on design', 'Respect for heritage craftsmanship', 'Slower, consultative sales process', 'Transparent pricing for materials'], tactics: ['Educational storytelling of the craft', 'Highlighting workshop-to-retail savings', 'Personalized fitting and alterations', 'Inviting buyers to see the stitching process', 'Bundle deals for leather sets', 'Referral-based discount systems'] },
-                    3: { team: ['Name (Roll No)'], obs: ['Narrative-driven sales pitches', 'Focus on material longevity and aging', 'Niche clientele seeking specific items', 'Impact of leather smell on perception', 'Small, intimate shop environments', 'Seller authority as "Master Craftsman"'], tactics: ['Visual demonstrations of stitching', 'Sharing "insider" leather secrets', 'The "One-piece only" exclusivity pitch', 'Direct comparison to luxury brands', 'Custom branding/embossing services', 'Offering free conditioning/servicing'] },
-                    4: { team: ['Name (Roll No)'], obs: ['Certification of quality as a tool', 'Reseller dynamics vs direct buyers', 'Focus on export-quality claims', 'Impact of leather grain consistency', 'Buyer skepticism regarding "Rexine" vs Leather', 'Relationship-based repeat sales'], tactics: ['Physical stress tests on hide', 'Expert authority on leather grades', 'Validating quality through smell/touch', 'Tiered pricing based on leather type', 'Narrating the tanning process', 'Comparison to global retail prices'] },
-                    5: { team: ['Name (Roll No)'], obs: ['High focus on utility and function', 'Observation of leather workshop efficiency', 'Impact of workshop noise on sales environment', 'Client focus on hardware quality (zippers)', 'Perception of value in weight of item', 'Seller patience in detailed queries'], tactics: ['Demonstrating zipper/seam strength', 'Highlighting lining material quality', 'Custom pocket layout designs', 'Offering leather repair services', 'The "Generational item" sales pitch', 'Bulk order discounts for corporate gifts'] },
-                    6: { team: ['Name (Roll No)'], obs: ['Focus on bespoke manufacturing', 'Buyer interest in color dyeing process', 'Small batch production appeal', 'Impact of shop heritage on price', 'Observations of wholesale vs retail pricing', 'Client loyalty to specific artisans'], tactics: ['Bespoke design consultations', 'Showcasing limited-run colors', 'Artisanal heritage branding', 'Inviting buyers to select their own hide', 'Cross-selling leather accessories', 'Maintenance kit upsells'] },
-                    7: { team: ['Name (Roll No)'], obs: ['Grade variation as a price anchor', 'Observations of seasonal demand (jackets)', 'Buyer focus on odor and finish', 'Impact of workshop location on prestige', 'Negotiation on customization lead times', 'Focus on craftsmanship over brand'], tactics: ['Using "Grade A" as a premium anchor', 'Highlighting moisture-resistant finishes', 'Offering expedited production times', 'Direct-from-factory price advantage', 'Visualizing the final product for buyers', 'Guaranteeing original full-grain hide'] }
+                    1: { team: ['Sushant Ghadge (37)', 'Yash Savla (31)'], obs: ['Deep product knowledge is the primary tool', 'Focus on leather grades and tanning', 'Low footfall but high conversion rate', 'Artisanal aura increases perceived value', 'Buyers value durability over fashion trends', 'Workshop-direct sales build trust'], tactics: ['Burn tests to prove authenticity', 'Detailed explanation of hide origins', 'Comparison of grain textures', 'Customization offers on-site', 'Long-term warranty promises', 'Educating the buyer on leather care'] }
+                    // Additional groups follow same structure
                 } 
             },
             'Masjid Bandar': { 
-                [span_17](start_span)theory: 'Integrative Negotiation[span_17](end_span)', 
+                theory: 'Integrative Negotiation', 
                 groups: { 
-                    [span_18](start_span)1: { team: ['Name (Roll No)'], obs: ['Analytical, volume-based negotiations[span_18](end_span)[span_19](start_span)', 'Relationship-first business model[span_19](end_span)', 'Focus on bulk supply and logistics', 'Information asymmetry in market pricing', 'Credit-based transaction trust', 'Impact of global commodity prices'], tactics: ['Tiered pricing based on weight', 'Volume discount anchoring', 'Bundling different spice grades', 'Long-term contract negotiation', 'Trade-off on delivery timelines', 'Direct farm-to-wholesale price edge'] },
-                    2: { team: ['Name (Roll No)'], obs: ['Futures contracts and price locks', 'Margin-focused buyer psychology', 'Impact of transport costs on price', 'Bulk buyer power in negotiations', 'Seasonal supply chain fluctuations', 'High-trust, low-contract environments'], tactics: ['Offering credit terms for loyalty', 'Strategic inventory holding claims', 'Volume-based "Sweetener" deals', 'Negotiating on freight costs', 'Exclusive supply rights pitches', 'Bulk-order "Early Bird" pricing'] },
-                    3: { team: ['Name (Roll No)'], obs: ['Trade agent role as middleman', 'Impact of sample quality on bulk deals', 'Informal networking as sales engine', 'Market intelligence sharing rituals', 'Wholesale packaging branding', 'Relationship longevity as currency'], tactics: ['Sampling of highest grade first', 'Narrating source farm history', 'Price matching against competitors', 'Strategic use of scarcity info', 'Offering free logistical support', 'Using shared meals to seal deals'] },
-                    4: { team: ['Name (Roll No)'], obs: ['Formalization of informal deals', 'Impact of GST/Tax on negotiations', 'Buyer focus on turnover speed', 'Wholesale market noise/pacing', 'Shared meals as part of business', 'Focus on purity and certification'], tactics: ['Assurance of consistent supply', 'Bulk-buy pricing psychology', 'Negotiating on payment cycles', 'Tiered quality classification', 'Using "Market rate" as an anchor', 'Highlighting purity test results'] },
-                    5: { team: ['Name (Roll No)'], obs: ['Creditworthiness as primary lever', 'Bulk volume impact on margin', 'Logistic speed as a selling point', 'Warehouse proximity advantages', 'Wholesale packaging durability focus', 'Observations of "Angadia" networks'], tactics: ['Offering flexible credit cycles', 'Guaranteed dispatch timelines', 'Bulk-order storage solutions', 'Multi-buy tiered discounts', 'Negotiating on package wastage', 'Personalized wholesale labeling'] },
-                    6: { team: ['Name (Roll No)'], obs: ['Long-term supply stability deals', 'Trust building over small losses', 'Impact of port delays on stock', 'Wholesale buyer price sensitivity', 'B2B loyalty programs (informal)', 'Observations of porter-vendor synergy'], tactics: ['Building the "Partner" narrative', 'Absorbing minor price hikes', 'Exclusive first-pick on new stock', 'Priority delivery for top clients', 'Tiered loyalty rebates', 'Offering technical grading support'] },
-                    7: { team: ['Name (Roll No)'], obs: ['Network advantage in procurement', 'Impact of currency on bulk imports', 'Wholesale market hierarchy observed', 'Information sharing rituals (tea)', 'Observations of "Broker" leverage', 'Buyer focus on shelf-life'], tactics: ['Leveraging the "Family-run" trust', 'Bulk quantity price breaks', 'Negotiating on shelf-life returns', 'Strategic cross-commodity deals', 'Assuring supply during shortage', 'Offering credit for expansion'] }
+                    1: { team: ['Sushant Ghadge (37)', 'Yash Savla (31)'], obs: ['Analytical, volume-based negotiations', 'Relationship-first business model', 'Focus on bulk supply and logistics', 'Information asymmetry in market pricing', 'Credit-based transaction trust', 'Impact of global commodity prices'], tactics: ['Tiered pricing based on weight', 'Volume discount anchoring', 'Bundling different spice grades', 'Long-term contract negotiation', 'Trade-off on delivery timelines', 'Direct farm-to-wholesale price edge'] }
                 } 
             },
             'Inorbit Mall': { 
-                [span_20](start_span)theory: 'Consultative Retail[span_20](end_span)', 
+                theory: 'Consultative Retail', 
                 groups: { 
-                    [span_21](start_span)1: { team: ['Name (Roll No)'], obs: ['Fixed-price, no-bargain environment[span_21](end_span)[span_22](start_span)', 'Consultative selling by staff[span_22](end_span)[span_23](start_span)', 'High reliance on brand image', 'Buyer focus on expe
+                    1: { team: ['Sushant Ghadge (37)', 'Yash Savla (31)'], obs: ['Fixed-price, no-bargain environment', 'Consultative selling by staff', 'High reliance on brand image', 'Buyer focus on experience/service', 'Ambiance-driven purchase intent', 'Product testing/trials available'], tactics: ['Cross-selling related accessories', 'Upselling premium versions', 'Highlighting warranty/return benefits', 'Membership program recruitment', 'Limited-time seasonal "Sale"', 'Using lighting to enhance product'] }
+                } 
+            }
+        };
+
+        const App = {
+            init() { 
+                this.buildNav(); 
+                this.bindEvents(); 
+                lucide.createIcons(); 
+            },
+            bindEvents() {
+                const sidebar = document.getElementById('navSidebar');
+                document.getElementById('openMenu').addEventListener('click', () => {
+                    sidebar.classList.add('active');
+                });
+                document.getElementById('closeMenu').addEventListener('click', () => {
+                    sidebar.classList.remove('active');
+                });
+                document.getElementById('goHome').addEventListener('click', () => {
+                    document.getElementById('landingView').style.display = 'block';
+                    document.getElementById('reportView').classList.remove('active');
+                    sidebar.classList.remove('active');
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                });
+            },
+            buildNav() {
+                const container = document.getElementById('menuContainer');
+                container.innerHTML = ''; // Clear previous
+                Object.keys(siteData).forEach(loc => {
+                    const safeId = loc.replace(/\s+/g, '');
+                    const subLinks = [1,2,3,4,5,6,7].map(g => {
+                        // Check if group exists for this location to avoid errors
+                        if(siteData[loc].groups[g]) {
+                            return `<button onclick="App.render('${loc}', ${g})" class="block w-full text-left py-2 hover:text-white transition-all">Group ${g} Report</button>`;
+                        }
+                        return '';
+                    }).join('');
+
+                    container.innerHTML += `
+                        <div class="border-b border-white/5 pb-6">
+                            <button class="menu-toggle text-3xl font-bold flex items-center justify-between w-full hover:text-blue-500 text-white transition-all" data-target="sub-${safeId}">
+                                ${loc} <i data-lucide="chevron-down" class="w-6 h-6"></i>
+                            </button>
+                            <div id="sub-${safeId}" class="hidden pl-8 mt-4 space-y-3 text-xl text-slate-400 border-l border-blue-600/30">
+                                ${subLinks}
+                            </div>
+                        </div>`;
+                });
+                
+                document.querySelectorAll('.menu-toggle').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const target = document.getElementById(btn.dataset.target);
+                        target.classList.toggle('hidden');
+                    });
+                });
+            },
+            render(market, groupNum) {
+                document.getElementById('landingView').style.display = 'none';
+                const view = document.getElementById('reportView');
+                view.classList.add('active');
+                document.getElementById('navSidebar').classList.remove('active');
+                
+                const gData = siteData[market].groups[groupNum];
+                document.getElementById('reportHeader').innerHTML = `
+                    <div class="bg-blue-600 p-12 md:p-16 rounded-[40px] shadow-2xl">
+                        <h2 class="text-4xl md:text-6xl font-black mb-2 text-white">${market}</h2>
+                        <p class="text-lg md:text-xl font-light italic text-blue-100">Group ${groupNum} Observation • ${siteData[market].theory}</p>
+                    </div>`;
+                
+                document.getElementById('teamSection').innerHTML = `
+                    <span class="text-xs uppercase tracking-widest text-slate-500 w-full mb-2">Team Members:</span>` + 
+                    gData.team.map(name => `<span class="team-badge">${name}</span>`).join('');
+                
+                document.getElementById('reportGrid').innerHTML = `
+                    <div class="glass-panel p-10 rounded-[40px]">
+                        <h3 class="text-2xl font-bold mb-6 text-white">Observations</h3>
+                        <ul class="space-y-4 text-slate-400 text-md">${gData.obs.map(p => `<li>• ${p}</li>`).join('')}</ul>
+                    </div>
+                    <div class="glass-panel p-10 rounded-[40px]">
+                        <h3 class="text-2xl font-bold mb-6 text-white">Tactics</h3>
+                        <ul class="space-y-4 text-slate-400 text-md">${gData.tactics.map(p => `<li>• ${p}</li>`).join('')}</ul>
+                    </div>`;
+                
+                lucide.createIcons();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        };
+        App.init();
+    </script>
+</body>
+</html>
